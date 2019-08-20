@@ -1,20 +1,27 @@
 import React, { useState, useEffect } from 'react'
 import Arrow from 'Shared/Components/Arrow'
+import entries from 'Shared/Resources/experienceEntries.json'
 import { number } from 'prop-types';
+import { RouteComponentProps } from 'react-router'
 
-interface ListItemProps {
+interface ListItemProps{
     title: string,
     subTitle: string,
     description: string,
     header?: string,
     color: string,
-    active: boolean
+    history: any,
+    active: boolean,
+    match: any
 }
 
-const ListItem: React.FC<ListItemProps> = ({ color, title, subTitle, description, active }) => {
+const ListItem: React.FC<ListItemProps> = ({ color, title, subTitle, description, active, history }) => {    
+    const viewDetails = () => {
+        history.push(`/details/${title}`)
+    }
     return (
         <li className="listItemContainer">
-            <div className="contentsContainer">
+            <div className="contentsContainer" onClick={viewDetails}>
                 <div>
                     <h3>
                         {subTitle}

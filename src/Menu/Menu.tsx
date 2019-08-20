@@ -7,7 +7,7 @@ import useWindowHeight from 'Menu/Shared/hooks/useWindowHeight'
 import debounce from 'Shared/Utils/debounce'
 import { withRouter, RouteComponentProps } from 'react-router';
 
-const Menu: React.FC<RouteComponentProps> = ({ history, location }) => {
+const Menu: React.FC<RouteComponentProps> = ({ history, location, match }) => {
 	const [listItemRef] = useState(React.createRef<HTMLUListElement>())
 	const [listIndexRef] = useState(React.createRef<HTMLUListElement>())
 	const listIndexHeight = 128
@@ -70,6 +70,7 @@ const Menu: React.FC<RouteComponentProps> = ({ history, location }) => {
 				ref={listItemRef}
 				location={location}
 				history={history}
+				match={match}
 			/>
 		</div>
 	)

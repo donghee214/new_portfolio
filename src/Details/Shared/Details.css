@@ -1,0 +1,12 @@
+.detailsContainer{
+
+}
+
+.detailsTitleContainer{
+    width: 74vw;
+    margin-left: 26vw;    
+    position: absolute;
+    display: flex;
+    align-items: center;    
+    height: 100vh;
+}
