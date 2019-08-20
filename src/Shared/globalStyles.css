@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap');
+:root{
+    --dark-grey: #333;
+    --light-grey: #888;
+    --grey: #555;
+    font-size: 32px;
+}
+
+@media(min-width:320px){ 
+    :root{
+        font-size: 16px;
+    }
+}
+@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
+@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) {
+     :root{
+        font-size: 32px;
+     }
+}
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
+html, body {
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+h3, h2, h1, p{
+    padding: 0;
+    margin: 0;
+}
+
+h3{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 0.75rem;
+    color: var(--grey)
+}
+
+h2{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+}
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 0.75rem;
+}
+
+.h2Alignh3{
+    margin-left: -1.5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

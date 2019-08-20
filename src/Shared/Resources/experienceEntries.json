@@ -1,0 +1,76 @@
+{
+    "experiences": [
+        {
+            "indexChar": "T",
+            "title": "University of Toronto",
+            "subTitle": "Bachelor of Applied Science & Engineering",
+            "description": "Mechatronics, Computer Science & Robotics",
+            "year": "2020",
+            "color": "#002A5C",
+            "id": "uoft-index"            
+        },
+        {
+            "indexChar": "P",
+            "title": "Palantir",
+            "subTitle": "Forward Deployed Software Engineering Intern",
+            "description": "HiveQL to Spark SQL Transpiler & Infrastructure",
+            "year": "2019",
+            "color": "#000",
+            "id": "palantir-index"
+        },      
+        {
+            "indexChar": "S",
+            "title": "Secret Mission Software",
+            "subTitle": "Software Engineering Intern",
+            "description": "REST + GraphQL Backend & React Frontend",
+            "year": "2019",
+            "color": "#2E7AAA",
+            "id": "secret-mission-index"
+        },
+        {
+            "indexChar": "H",
+            "title": "Hack the North",
+            "subTitle": "3rd - Music Popularity Predictor",
+            "description": "Scraping Spotify's database on music metadata to predict the next big hit",
+            "year": "2018",
+            "color": "#F3A8A2",
+            "id": "htn-index"            
+        },          
+        {
+            "indexChar": "C",
+            "title": "Condos.ca",
+            "subTitle": "Software Engineering Intern",
+            "description": "REST Backend & React Frontend",
+            "year": "2018",
+            "color": "#50CECE",
+            "id": "condos-index"
+        },
+        {
+            "indexChar": "U",
+            "title": "UofT Hacks",
+            "subTitle": "3rd - Crowdsourcing Playlist in Realtime",
+            "description": "Adding & voting on the next song to play in queue through Spotify APIs & Firebase",
+            "year": "2018",
+            "color": "#DB3C8F",
+            "id": "uoft-hacks-index"            
+        },               
+        {
+            "indexChar": "R",
+            "title": "RBC",
+            "subTitle": "Product Design Intern",
+            "description": "Scoping usecases with UI Designs",
+            "year": "2017",
+            "color": "#006AC3",
+            "id": "rbc-product-index"
+        },
+        {
+            "indexChar": "R",
+            "title": "RBC",
+            "subTitle": "Frontend Engineering Intern",
+            "description": "Building a platform to deploy smart contracts on Ethereum",
+            "year": "2016",
+            "color": "#006AC3",
+            "id": "rbc-frontend-index"
+        }
+    ]
+}
