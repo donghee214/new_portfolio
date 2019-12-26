@@ -1,34 +1,38 @@
-import React, { useState, useEffect } from 'react'
-import ListItem from 'Menu/Shared/components/ListItem'
-import entries from 'Shared/Resources/experienceEntries.json'
-import useIndexScrollPosition from 'Menu/Shared/hooks/useIndexScrollPosition'
-import { RouteComponentProps } from 'react-router';
-
-interface ListItemContainerProps extends RouteComponentProps{
+import React, { useState, useEffect } from "react";
+import ListItem from "Menu/Shared/components/ListItem";
+import { ExperienceEntryProps } from "Shared/Types/experienceEntryType";
+import { useWindowHeight } from "Shared/hooks/useWindowHeight";
+import { useWindowRatio } from "Shared/hooks/useWindowRatio";
+import { useStateValue } from "Shared/Context/GlobalContext";
+interface ListItemContainerProps {
+    experiences: ExperienceEntryProps[];
 }
 
-type Ref = HTMLUListElement
-
-const ListItemContainer = React.forwardRef<Ref, ListItemContainerProps>((props, ref) => {
-    const [activeIndex, setActiveIndex] = useState(props.location.pathname)
+const ListItemContainer: React.FC<ListItemContainerProps> = ({
+    experiences
+}) => {
+    const listItemRef = React.createRef<HTMLUListElement>();
+    const [{ menu }, dispatch] = useStateValue();
+    const scrollRatio = useWindowRatio(menu.listIndexHeight);
+    const windowHeight = useWindowHeight(window.innerHeight);
     useEffect(() => {
-        const { pathname } = props.location
-        setActiveIndex(pathname.slice(1))
-    }, [props.location])
-
-
+        if (listItemRef.current) {
+            listItemRef.current.scrollTop = windowHeight * menu.activeTab;
+        }
+    }, []);
 
     return (
-        <ul className="scrollContainer" ref={ref}>
-            {entries.experiences.map((entryProps, index) =>
+        <ul className="scrollContainer" ref={listItemRef}>
+            {experiences.map((entryProps, index) => (
                 <ListItem
-                    active={index == parseInt(activeIndex)}
+                    index={index}
+                    active={menu.activeTab === index}
                     key={entryProps.id}
-                    {...props}    
-                    {...entryProps} />
-                )}
+                    props={entryProps}
+                />
+            ))}
         </ul>
-    )
-})
+    );
+};
 
-export default ListItemContainer
+export default React.memo(ListItemContainer);

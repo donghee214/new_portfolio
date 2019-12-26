@@ -1,43 +1,46 @@
-import React, { useState, useEffect } from 'react'
-import ListIndex from 'Menu/Shared/components/ListIndex'
-import entries from 'Shared/Resources/experienceEntries.json'
-import useWindowHeight from 'Menu/Shared/hooks/useWindowHeight'
+import React, { useState, useEffect } from "react";
+import { CSSTransition } from "react-transition-group";
+import ListIndex from "Menu/Shared/components/ListIndex";
+import entries from "Shared/Resources/experienceEntries.json";
+import { useStateValue } from "Shared/Context/GlobalContext";
 
 //TODO: MAKE THIS LISTEN TO WITHROUTER INSTEAD, need a workaround for React.forwardRef ts
 interface ListIndexContainerProps {
-    location: any,
-    history: any
+    setClickActiveTab: Function;
 }
 
-type Ref = HTMLUListElement
+type Ref = HTMLUListElement;
 
-const ListIndexContainer = React.forwardRef<Ref, ListIndexContainerProps>((props, ref) => {
-    const [activeIndex, setActiveIndex] = useState(props.location.pathname)
-    const windowHeight = useWindowHeight(window.innerHeight)
+const ListIndexContainer: React.FC<ListIndexContainerProps> = ({
+    setClickActiveTab
+}) => {
+    const [listIndexRef] = useState(React.createRef<HTMLUListElement>());
+    const [{ menu }, dispatch] = useStateValue();
 
     useEffect(() => {
-        const { pathname } = props.location
-        setActiveIndex(pathname.slice(1))
-    }, [props.location])
-    
+        if (listIndexRef.current) {
+            dispatch({
+                type: "updateListIndexRef",
+                newListIndexRef: listIndexRef.current
+            });
+        }
+    }, [listIndexRef]);
+
     return (
-        <ul className="listScrollContainer" ref={ref}>
-            <li className="listItemBuffer">
-
-            </li>
-            {entries.experiences.map(
-                (entryProps, index) => <ListIndex
+        <ul className="listScrollContainer" ref={listIndexRef}>
+            <li className="listItemBuffer"></li>
+            {entries.experiences.map((entryProps, index) => (
+                <ListIndex
                     key={entryProps.id}
-                    order={index}
-                    active={index == activeIndex}
-                    history={props.history}
-                    {...entryProps} />)
-            }
-            <li className="listItemBuffer">
-
-            </li>
+                    index={index}
+                    active={menu.activeTab == index}
+                    setClickActiveTab={setClickActiveTab}
+                    {...entryProps}
+                />
+            ))}
+            <li className="listItemBuffer"></li>
         </ul>
-    )
-})
+    );
+};
 
-export default ListIndexContainer
+export default ListIndexContainer;

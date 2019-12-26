@@ -6,8 +6,12 @@
             "subTitle": "Bachelor of Applied Science & Engineering",
             "description": "Mechatronics, Computer Science & Robotics",
             "year": "2020",
-            "color": "#002A5C",
-            "id": "uoft-index"            
+            "city": "Toronto, Canada",
+            "color": "#002554",
+            "secondaryColor": "#FFFFFF",
+            "id": "uoft-index",
+            "logoName": "UoftLogo",
+            "season": 0
         },
         {
             "indexChar": "P",
@@ -15,17 +19,25 @@
             "subTitle": "Forward Deployed Software Engineering Intern",
             "description": "HiveQL to Spark SQL Transpiler & Infrastructure",
             "year": "2019",
+            "city": "London, United Kingdom",
             "color": "#000",
-            "id": "palantir-index"
-        },      
+            "secondaryColor": "#FFFFFF",
+            "id": "palantir-index",
+            "logoName": "PalantirLogo",
+            "season": 2
+        },
         {
             "indexChar": "S",
             "title": "Secret Mission Software",
             "subTitle": "Software Engineering Intern",
             "description": "REST + GraphQL Backend & React Frontend",
             "year": "2019",
+            "city": "Toronto, Canada",
             "color": "#2E7AAA",
-            "id": "secret-mission-index"
+            "secondaryColor": "#FFFFFF",
+            "id": "secret-mission-index",
+            "logoName": "SecretMissionLogo",
+            "season": 1
         },
         {
             "indexChar": "H",
@@ -33,17 +45,25 @@
             "subTitle": "3rd - Music Popularity Predictor",
             "description": "Scraping Spotify's database on music metadata to predict the next big hit",
             "year": "2018",
+            "city": "Waterloo, Canada",
             "color": "#F3A8A2",
-            "id": "htn-index"            
-        },          
+            "secondaryColor": "#FFFFFF",
+            "id": "htn-index",
+            "logoName": "HackTheNorthLogo",
+            "season": 3
+        },
         {
             "indexChar": "C",
             "title": "Condos.ca",
             "subTitle": "Software Engineering Intern",
             "description": "REST Backend & React Frontend",
             "year": "2018",
+            "city": "Toronto, Canada",
             "color": "#50CECE",
-            "id": "condos-index"
+            "secondaryColor": "#FFFFFF",
+            "id": "condos-index",
+            "logoName": "CondosLogo",
+            "season": 1
         },
         {
             "indexChar": "U",
@@ -51,17 +71,25 @@
             "subTitle": "3rd - Crowdsourcing Playlist in Realtime",
             "description": "Adding & voting on the next song to play in queue through Spotify APIs & Firebase",
             "year": "2018",
+            "city": "Toronto, Canada",
             "color": "#DB3C8F",
-            "id": "uoft-hacks-index"            
-        },               
+            "secondaryColor": "#FFFFFF",
+            "id": "uoft-hacks-index",
+            "logoName": "UoftHacksLogo",
+            "season": 0
+        },
         {
             "indexChar": "R",
             "title": "RBC",
             "subTitle": "Product Design Intern",
             "description": "Scoping usecases with UI Designs",
             "year": "2017",
+            "city": "Toronto, Canada",
             "color": "#006AC3",
-            "id": "rbc-product-index"
+            "secondaryColor": "#FFFFFF",
+            "id": "rbc-product-index",
+            "logoName": "RbcLogo",
+            "season": 2
         },
         {
             "indexChar": "R",
@@ -69,8 +97,12 @@
             "subTitle": "Frontend Engineering Intern",
             "description": "Building a platform to deploy smart contracts on Ethereum",
             "year": "2016",
+            "city": "Toronto, Canada",
             "color": "#006AC3",
-            "id": "rbc-frontend-index"
+            "secondaryColor": "#FFFFFF",
+            "id": "rbc-frontend-index",
+            "logoName": "RbcLogo",
+            "season": 2
         }
     ]
 }

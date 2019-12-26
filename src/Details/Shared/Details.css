@@ -1,12 +1,266 @@
-.detailsContainer{
-
+.detailsContainer {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
 }
 
-.detailsTitleContainer{
-    width: 74vw;
-    margin-left: 26vw;    
-    position: absolute;
+.palantirDefault {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 40px;
+}
+
+.uoftDefault {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 40px;
+}
+
+.titleContainer {
     display: flex;
-    align-items: center;    
-    height: 100vh;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+}
+
+.nameTitle {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Playfair Display", serif;
+}
+
+.subTitle {
+    color: white;
+    width: 100%;
+    font-family: "Playfair Display", serif;
+    font-size: 0.5rem;
+    font-weight: 600;
+}
+
+.st0 {
+    fill: #fff;
+}
+
+.detailsTopSection {
+}
+
+.detailsTitleContainer {
+}
+
+.greyedTagline {
+    color: var(--superLight-grey);
+}
+
+.quotationText {
+    font-family: "Playfair Display", serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark-grey);
+}
+.topSection {
+    height: 50vh;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.quotationContainer {
+    margin-top: 2rem;
+}
+
+.contentContainer {
+    padding: 1rem 2rem;
+}
+
+.hackTheNorthLogoDefault {
+    width: 150px;
+    height: 150px;
+}
+
+.bottomSection {
+    padding: 1rem 2rem;
+}
+
+.metaDataText {
+    font-family: "Playfair Display", serif;
+    font-size: 0.5rem;
+    font-weight: 600;
+}
+
+.counterStyle {
+    font-family: "Roboto";
+    font-size: 2.5rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    line-height: 1;
+}
+
+@media (min-width: 320px) {
+    .imageMetadata {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .textFact {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .textFactBottomRow {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        line-height: 1;
+    }
+    .textFactVertical {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        line-height: 1;
+    }
+
+    .contentContainer {
+        padding: 1rem 2rem;
+    }
+    .bottomSection {
+        padding: 1rem 2rem;
+    }
+    .topSection {
+        padding: 1rem 2rem;
+    }
+    .rbcLogoDefault {
+        width: 225px;
+        margin-bottom: 20px;
+    }
+    .logoImageContainer {
+        width: 350px;
+        margin-bottom: -50px;
+    }
+    .condosLogoDefault {
+        width: 150px;
+        fill: white;
+    }
+    .nameTitle {
+        font-size: 1.75rem;
+        text-align: center;
+        font-family: "Playfair Display", serif;
+    }
+    .uoftDefault {
+        margin-bottom: 0;
+        width: 150px;
+        height: 150px;
+    }
+    .titleContainer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    .subTitle {
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .palantirDefault {
+        margin-bottom: 0;
+    }
+    .secretMissionLogoDefault {
+        width: 150px;
+        height: 150px;
+    }
+    .hackTheNorthLogoDefault {
+        width: 175px;
+        height: 175px;
+        margin-bottom: 20px;
+    }
+
+    .bottomSection {
+        padding: 1rem 2rem;
+    }
+}
+@media (min-width: 480px) {
+    /* smartphones, Android phones, landscape iPhone */
+}
+@media (min-width: 600px) {
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}
+@media (min-width: 801px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media (min-width: 1025px) {
+    .quotationContainer {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .imageMetadata {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .imageCenter {
+        margin-top: 300px;
+    }
+    .imageBottom {
+        margin-top: 600px;
+    }
+    .textFact {
+        width: fit-content;
+        text-align: center;
+    }
+    .topSection {
+        padding: 1rem 4.5rem;
+    }
+    .rbcLogoDefault {
+        margin-left: -30px;
+    }
+    .logoImageContainer {
+        margin-bottom: -25px;
+    }
+    .condosLogoDefault {
+        width: 150px;
+        fill: white;
+        margin-bottom: 25px;
+    }
+    .nameTitle {
+        font-size: 2.5rem;
+        text-align: start;
+        margin-left: -4px;
+    }
+    .titleContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+    .subTitle {
+        text-align: start;
+        margin-bottom: -5px;
+    }
+    .uoftDefault {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 35px;
+    }
+    .palantirDefault {
+        margin-bottom: 40px;
+    }
+    .secretMissionLogoDefault {
+        width: 175px;
+        height: 175px;
+        margin-bottom: 40px;
+    }
+    .bottomSection {
+        padding: 1rem 4.5rem;
+    }
+    .contentContainer {
+        padding: 1rem 4.5rem;
+    }
 }
