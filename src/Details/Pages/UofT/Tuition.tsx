@@ -16,7 +16,7 @@ export default ({ color }) => {
         }
     };
     return (
-        <div className={"textFact imageBottom"}>
+        <div className={"textFact"}>
             <h2 style={{ lineHeight: 1.1, marginLeft: "-0.1rem" }}>Tutition</h2>
             <div className="textFactBottomRow">
                 <div className="textFactVertical">

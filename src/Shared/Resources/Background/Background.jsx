@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react'
+import Date from "Menu/Shared/components/Date"
 import 'Shared/Resources/Background/BackgroundStyle.css'
 
-const Background = ({ season }) => {
+const Background = ({ season, year }) => {
 	let html = useRef(),
 		rainbow = useRef(),
 		rabbit = useRef(),
@@ -14,7 +15,7 @@ const Background = ({ season }) => {
     const backgroundColours = ["#cbe9f4", "#daf8ff", "#feec98", "#ffdc8a"]
     const bushColours = ["#ffffff", "#3ebf6d", "#99b31a", "#fd6d2e"]
     const cloudColours = ["#ffffff", "#ffffff", "#ffffff", "#eaf9fe"]
-	
+  
 	useEffect(() => {
         html.current = document.getElementsByTagName("html")[0];
         rainbow.current = document.querySelector(".rainbow");
@@ -81,6 +82,8 @@ useEffect(() => {
     updateSeasons(season)
 }, [season])
 
+
+
 //animate all
 function animate() {
  requestAnimationFrame(animate);
@@ -89,6 +92,7 @@ function animate() {
 animate();
     return (
 <div className="container">
+  <Date year={year} season={season}/>
   <div className="season"></div>
   <div className="sun"></div>
   <div className="rainbow">

@@ -14,7 +14,6 @@ export const menuReducer = (state, action) => {
                 activeTab: action.newTab
             };
         case "updateListItemRef":
-            console.log(action.newListItemRef);
             return {
                 ...state,
                 listItemRef: action.newListItemRef

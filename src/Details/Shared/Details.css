@@ -6,9 +6,24 @@
 }
 
 .palantirDefault {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     margin-bottom: 40px;
+}
+
+.palantirFoundry{
+    position: absolute;
+    left: 0;
+    width: 65.85%;
+    top: 13%;
+    left: 18.3%;
+}
+
+.palantirTopSection{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    align-items: center;
 }
 
 .uoftDefault {
@@ -40,8 +55,49 @@
     font-weight: 600;
 }
 
+.uoftBold{
+    font-weight: 500;
+    color: #002554;
+}
+
+.palantirBold{
+    font-weight: 500;
+    color: #000000;
+}
+
 .st0 {
     fill: #fff;
+}
+
+.ipad {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.ipadContainer{
+    width: 80vw;
+    position: relative;
+}
+
+.secretMissionTopSection{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.iphoneContainer{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: -9.5%;
+}
+
+.iphone{
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .detailsTopSection {
@@ -71,11 +127,16 @@
 }
 
 .quotationContainer {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .contentContainer {
     padding: 1rem 2rem;
+}
+
+.contentDetailPart1{
+    margin: 3rem 0;
+    line-height: 2;
 }
 
 .hackTheNorthLogoDefault {
@@ -83,7 +144,7 @@
     height: 150px;
 }
 
-.bottomSection {
+.detailsPadding {
     padding: 1rem 2rem;
 }
 
@@ -102,17 +163,30 @@
     align-items: flex-start;
     line-height: 1;
 }
+.tripletContainer{
+
+}
 
 @media (min-width: 320px) {
+    .ipad{
+        width: 100%;
+    }
+    .palantirTopSection{
+        padding: 1rem 2rem;
+        flex-direction: column;
+    }
+    .quotationText{
+        text-align: center;
+    }
     .imageMetadata {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     .textFact {
-        width: 100%;
         display: flex;
         flex-direction: column;
+        margin: 1rem 0;
     }
     .textFactBottomRow {
         display: flex;
@@ -130,7 +204,7 @@
     .contentContainer {
         padding: 1rem 2rem;
     }
-    .bottomSection {
+    .detailsPadding {
         padding: 1rem 2rem;
     }
     .topSection {
@@ -183,7 +257,7 @@
         margin-bottom: 20px;
     }
 
-    .bottomSection {
+    .detailsPadding {
         padding: 1rem 2rem;
     }
 }
@@ -194,9 +268,31 @@
     /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 }
 @media (min-width: 801px) {
+    .detailsPadding {
+        padding: 1rem 2.5rem;
+    }
+    .contentContainer {
+        padding: 1rem 2.5rem;
+    }
+    .secretMissionTopSection{
+        flex-direction: row;
+    }
+    .midTriplet{
+        margin-top: 5rem;
+    }
+    .endTriplet{
+        margin-top: 10rem;
+    }
     /* tablet, landscape iPad, lo-res laptops ands desktops */
 }
 @media (min-width: 1025px) {
+    .palantirTopSection{
+        padding: 1rem 4.5rem;
+        flex-direction: row;
+    }
+    .quotationText{
+        text-align: left;
+    }
     .quotationContainer {
         display: flex;
         justify-content: flex-end;
@@ -217,7 +313,7 @@
         text-align: center;
     }
     .topSection {
-        padding: 1rem 4.5rem;
+        padding: 1rem 3.5rem;
     }
     .rbcLogoDefault {
         margin-left: -30px;
@@ -257,10 +353,27 @@
         height: 175px;
         margin-bottom: 40px;
     }
-    .bottomSection {
+    .detailsPadding {
+        padding: 1rem 3.5rem;
+    }
+    .contentContainer {
+        padding: 1rem 3.5rem;
+    }
+    .iphoneContainer{
+        margin-left: -26%;
+    }
+}
+
+
+@media (min-width: 1225px) {
+    .topSection {
+        padding: 1rem 4.5rem;
+    }
+    .detailsPadding {
         padding: 1rem 4.5rem;
     }
     .contentContainer {
         padding: 1rem 4.5rem;
     }
+
 }

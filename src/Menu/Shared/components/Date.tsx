@@ -1,45 +1,44 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import { CSSTransition } from "react-transition-group";
 import usePrevious from "Shared/hooks/usePrevious";
 interface DateProps {
     year: string;
     season: number;
-    activeTab: number;
-    totalEntries: number;
 }
 
-const Date: React.FC<DateProps> = ({
+const DateSeason: React.FC<DateProps> = ({
     year,
-    season,
-    activeTab,
-    totalEntries
+    season
 }) => {
-    // const prevDate = usePrevious({ year: year ? year : "2020", season });
-    // let animationType = "moveDown";
-    // useEffect(() => {
-    //     let currYear = parseInt(prevDate.year);
-    //     let newYear = parseInt(year);
-    //     if (currYear > newYear) {
-    //         animationType = "moveDown";
-    //     } else if (currYear < newYear) {
-    //         animationType = "moveUp";
-    //     } else {
-    //         if (prevDate.season >= season) {
-    //             animationType = "moveDown";
-    //         } else {
-    //             animationType = "moveUp";
-    //         }
-    //     }
-    // }, [year, season]);
+    const seasonMap = [{
+            text: "Winter",
+            color: "rgba(78, 162, 187, 0.15)"
+        },
+        {
+            text: "Spring",
+            color: "rgba(41, 157, 92, 0.15)"
+        },
+        {
+            text: "Summer",
+            color: "rgba(137, 165, 5, 0.15)"
+        },
+        {
+            text: "Fall",
+            color: "rgba(255, 107, 47, 0.15)"
+        }]
     return (
-        <div className="year">
-            <h3 className="yearStyling">{year}</h3>
-            {/* <h3>{year[0]}</h3>
-            <h3>{year[1]}</h3>
-            <h3>{year[2]}</h3>
-            <h3>{year[3]}</h3> */}
-        </div>
+            <h3 className="dateTime"> 
+                {seasonMap.map((obj, index) => 
+                        <span className="dateText" style={{
+                            color: seasonMap[season].color,
+                            opacity: obj.text == seasonMap[season].text && year ? 1 : 0
+                        }}>
+                            {obj.text} {year}
+                    </span>
+                )}
+            </h3>
+       
     );
 };
 
-export default React.memo(Date);
+export default React.memo(DateSeason);

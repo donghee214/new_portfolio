@@ -12,7 +12,7 @@ export default ({ color }) => {
         style: { color: color }
     };
     return (
-        <div className={"textFact imageCenter"}>
+        <div className={"textFact"}>
             <h2 style={{ lineHeight: 1.1 }}>Ranked</h2>
             <div className="textFactBottomRow">
                 <CountUp {...rankCounterParams} />

@@ -40,6 +40,10 @@ const ListItem: React.FC<ListItemProps> = ({
         });
     };
 
+
+
+    const determineFontSize = (string) => string.length < 20 ? "2.25rem" : "1.75rem"  
+
     return (
         <li className="listItemContainer">
             <div
@@ -51,22 +55,14 @@ const ListItem: React.FC<ListItemProps> = ({
                     style={{
                         textAlign: "center",
                         paddingBottom: "10px",
-                        lineHeight: 1.2
+                        lineHeight: 1.2,
+                        fontSize: determineFontSize(props.title)
                     }}
                 >
                     {props.title}
                 </h2>
                 <h3 style={{ textAlign: "center" }}>{props.subTitle}</h3>
-
-                {/* <h3>{props.description}</h3> */}
-
-                {/* <div className="arrowComposition">
-                    <div className="spine" />
-                    <Arrow className={"mediumArrow"} />
-                    <svg className="circle" stroke={props.color}>
-                        <circle className="outer" cx="60" cy="60" r="40" />
-                    </svg>
-                </div> */}
+                
             </div>
         </li>
     );

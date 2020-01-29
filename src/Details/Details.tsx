@@ -33,7 +33,7 @@ const Details: React.FC<DetailsProps> = ({ state, children }) => {
                     </div>
                 </div>
             </div>
-            <div className="bottomSection">
+            <div className="detailsPadding">
                 <div className="metaData">
                     <p
                         className={"metaDataText"}

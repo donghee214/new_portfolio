@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ListItem from "Menu/Shared/components/ListItem";
+import IntroTab from "Menu/IntroTab"
 import { ExperienceEntryProps } from "Shared/Types/experienceEntryType";
 import { useWindowHeight } from "Shared/hooks/useWindowHeight";
 import { useWindowRatio } from "Shared/hooks/useWindowRatio";
@@ -23,14 +24,18 @@ const ListItemContainer: React.FC<ListItemContainerProps> = ({
 
     return (
         <ul className="scrollContainer" ref={listItemRef}>
-            {experiences.map((entryProps, index) => (
+            {experiences.map((entryProps, index) => index == 0 ?
+                <IntroTab
+                    index={index}
+                    active={menu.activeTab === index}
+                    key={entryProps.id} /> :
                 <ListItem
                     index={index}
                     active={menu.activeTab === index}
                     key={entryProps.id}
                     props={entryProps}
                 />
-            ))}
+            )}
         </ul>
     );
 };

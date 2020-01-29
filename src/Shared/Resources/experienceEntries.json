@@ -1,6 +1,19 @@
 {
     "experiences": [
         {
+            "indexChar": "",
+            "title": "",
+            "subTitle": "",
+            "description": "",
+            "year": "",
+            "city": "",
+            "color": "",
+            "secondaryColor": "",
+            "id": "",
+            "logoName": "",
+            "season": 0
+        },
+        {
             "indexChar": "T",
             "title": "University of Toronto",
             "subTitle": "Bachelor of Applied Science & Engineering",

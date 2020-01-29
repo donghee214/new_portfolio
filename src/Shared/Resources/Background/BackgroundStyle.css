@@ -197,7 +197,9 @@
     height: 400px;
 }
 
-.snow {
+
+/* too slow LOL  */
+/* .snow {
     transition: 3s ease background;
     position: absolute;
     opacity: 0;
@@ -368,8 +370,8 @@
     left: 60px;
     -webkit-animation-delay: 9s;
     animation-delay: 9s;
-}
-
+} */
+/* 
 .rain {
     position: absolute;
     opacity: 0;
@@ -627,7 +629,7 @@
     left: 62px;
     -webkit-animation-delay: 3s;
     animation-delay: 3s;
-}
+} */
 
 @-webkit-keyframes drops {
     0% {

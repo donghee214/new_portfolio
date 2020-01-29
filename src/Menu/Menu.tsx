@@ -12,12 +12,9 @@ const Menu: React.FC<MenuProps> = () => {
     return (
         <div className="menuContainer">
             <ListItemContainer experiences={entries.experiences} />
-            <Background season={entries.experiences[menu.activeTab].season} />
-            <Date
-                activeTab={menu.activeTab}
-                totalEntries={entries.experiences.length}
-                year={entries.experiences[menu.activeTab].year}
-                season={entries.experiences[menu.activeTab].season}
+            <Background 
+                season={entries.experiences[menu.activeTab].season} 
+                year={entries.experiences[menu.activeTab].year} 
             />
         </div>
     );

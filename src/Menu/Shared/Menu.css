@@ -3,6 +3,11 @@
     width: 100%;
 }
 
+.blueThemedFont{
+    font-weight: 500;
+    color: #4EA2BB;
+}
+
 .scrollContainer {
     height: 100vh;
     width: 100%;
@@ -11,10 +16,6 @@
     box-sizing: border-box;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-}
-
-.visible {
-    transform: translate3d(0, 0, 0);
 }
 
 .scrollFullPage {
@@ -159,7 +160,7 @@
 
 .yearStyling {
     font-size: 1.75rem;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto";
     color: var(--grey);
 }
 
@@ -190,10 +191,47 @@
     transition: opacity 400ms;
 }
 
+.dateText {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.dateTime{
+    font-size: 3rem;
+    top: 4.5rem;
+    font-weight: 700;
+    width: 100%;
+    position: absolute;
+}
+
+.dateTimeAnimation-enter{
+    opacity: 0;
+}
+.dateTimeAnimation-enter-active {
+    opacity: 1;
+    transition: opacity 10000ms;
+}
+.dateTimeAnimation-exit {
+    opacity: 1;
+}
+.dateTimeAnimation-exit-active {
+    opacity: 0;
+    transition: opacity 10000ms;
+}
+/* .dateTimeColor{
+    transition: 0.5s ease-out;
+} */
+
 @media (min-width: 320px) {
     .outer {
         stroke-dasharray: 537;
         stroke-dashoffset: 0;
+    }
+    .contentsContainer{
+        padding-bottom: 3rem;
     }
 }
 @media (min-width: 480px) {
@@ -215,6 +253,9 @@
     }
     .contentsContainer:hover .spine {
         width: 150px;
+    }
+    .contentsContainer{
+        padding-bottom: 0rem;
     }
 }
 @media (min-width: 1281px) {
