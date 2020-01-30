@@ -11,6 +11,7 @@ const Iphone: React.FC<IphoneProps> = ({ image, imageClassname, imageContainerCl
     return (
         <div className={`${imageContainerClassName} iphoneContainer`}>
             <img src={iphoneImage} className="iphone"/>
+            <img src={image} className={imageClassname}/>
         </div>
     )
 }

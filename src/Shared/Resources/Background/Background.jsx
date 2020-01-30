@@ -92,7 +92,7 @@ function animate() {
 animate();
     return (
 <div className="container">
-  <Date year={year} season={season}/>
+  {/*<Date year={year} season={season}/>*/}
   <div className="season"></div>
   <div className="sun"></div>
   <div className="rainbow">

@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import Menu from "Menu/Menu";
 import Details from "Details/Details";
 import "Shared/globalStyles.css";
-import { UofT, Palantir, SecretMissionSoftware, HackTheNorth } from "Details/Pages";
+import { UofT, Palantir, SecretMissionSoftware, HackTheNorth, Condos } from "Details/Pages";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import { StateProvider } from "Shared/Context/GlobalContext";
@@ -47,6 +47,10 @@ const App: React.FC = () => {
                                         <Route
                                             path="/details/Hack The North"
                                             component={HackTheNorth}
+                                        />
+                                        <Route 
+                                            path="/details/Condos.ca"
+                                            component={Condos}
                                         />
                                         <Route path="/" component={Menu} />
                                     </Switch>

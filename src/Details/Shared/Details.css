@@ -81,24 +81,39 @@
     position: relative;
 }
 
-.secretMissionTopSection{
+.tripletTopSection{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
 
 .iphoneContainer{
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    margin-left: -9.5%;
+    position: relative;
+    width: 100%;
+    min-height: 450px;
 }
 
 .iphone{
-    max-width: 100%;
-    max-height: 100%;
+    position: absolute;
+    width: 100%;
+    /* height: 100%; */
+    z-index: 1;
 }
+.condosIphoneImageStyling{
+    position: absolute;
+    width: 60.1%;
+    left: 31.2%;
+    top: 10%;
+
+}
+
+.arriveIphoneImageStyling{
+    position: absolute;
+    width: 60.5%;
+    top: 10%;
+    left: 31.15%;
+}
+
 
 .detailsTopSection {
 }
@@ -163,11 +178,37 @@
     align-items: flex-start;
     line-height: 1;
 }
-.tripletContainer{
 
+.htn1{
+    position: absolute;
+    z-index: 1;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    left: 21%;
+    width: 60%;
+    top: 22%;
+}
+
+.ipadBackground{
+    width: 66%;
+    height: 73.4%;
+    position: absolute;
+    top: 12.77%;
+    left: 18.2%;
+}
+
+.htnTopSection{
+    display: flex;
+    flex-direction: column;
+    align-items: ;
 }
 
 @media (min-width: 320px) {
+    .tripletContainer{
+        width: 100%;
+    }
+    
     .ipad{
         width: 100%;
     }
@@ -274,9 +315,13 @@
     .contentContainer {
         padding: 1rem 2.5rem;
     }
-    .secretMissionTopSection{
+    .tripletTopSection{
         flex-direction: row;
     }
+    .tripletContainer{
+        width: 33.3333%;
+    }
+    
     .midTriplet{
         margin-top: 5rem;
     }

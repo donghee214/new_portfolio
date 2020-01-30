@@ -3,6 +3,10 @@ import Details from "Details/Details"
 import SecretMissionLogo from "Details/Shared/Components/SecretMissionLogo"
 import { withRouter, RouteComponentProps } from "react-router";
 import Iphone from "Details/Shared/Components/Iphone"
+import arriveImage1 from "Shared/Resources/Images/arrive1.png"
+import arriveImage2 from "Shared/Resources/Images/arrive2.png"
+import arriveImage3 from "Shared/Resources/Images/arrive3.png"
+import arriveImage4 from "Shared/Resources/Images/arrive4.png"
 
 interface SecretMissionProps extends RouteComponentProps {}
 
@@ -12,13 +16,13 @@ const SecretMissionSoftware: React.FC<SecretMissionProps> = ({ location }) => {
                 <Details state={location.state}>
                     <SecretMissionLogo />
                 </Details>
-                <div className="detailsPadding secretMissionTopSection">
+                <div className="detailsPadding tripletTopSection">
                     <div className="tripletContainer">
                         <p className="quotationText">
                             <span className="greyedTagline">Log in, </span>
                             Sync.
                         </p>
-                        <Iphone />
+                        <Iphone image={arriveImage1} imageClassname={"arriveIphoneImageStyling"}/>
                     </div>
                     
                     <div className="tripletContainer midTriplet">
@@ -26,14 +30,14 @@ const SecretMissionSoftware: React.FC<SecretMissionProps> = ({ location }) => {
                             <span className="greyedTagline">View, </span>
                             Organize.
                         </p>
-                        <Iphone />
+                        <Iphone image={arriveImage2} imageClassname={"arriveIphoneImageStyling"}/>
                     </div>
                     <div className="tripletContainer endTriplet">
                         <p className="quotationText">
                             <span className="greyedTagline">Track, </span>
                             Watch.
                         </p>
-                        <Iphone />
+                        <Iphone image={arriveImage3} imageClassname={"arriveIphoneImageStyling"}/>
                     </div>
                     
                 </div>
@@ -53,7 +57,7 @@ const SecretMissionSoftware: React.FC<SecretMissionProps> = ({ location }) => {
                             requirements such that the <span className="palantirBold">front-end</span> was well reflected on what they needed to see and do regarding each individual wind turbine.
                         </p>
                     </div>
-                </div>
+            </div>
             </div>
         )
     ;
